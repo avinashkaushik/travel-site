@@ -1,0 +1,25 @@
+@define-mixin atSmall {              /* * media query should only select screens which are 530px or larger * */
+    @media(min-width: 530px){  
+        @mixin-content;
+    }           
+}
+
+@define-mixin atMedium {             
+    @media(min-width: 800px){  
+        @mixin-content;
+    }           
+}
+
+@define-mixin atLarge {             
+    @media(min-width: 1200px){  
+        @mixin-content;
+    }           
+}
+@define-mixin clearfix{
+&::after{                    /*The ::after selector inserts something after the content of each selected element(s). Use the content property to specify the content to insert.
+                             Use the ::before selector to insert something before the content. */
+   content: "";
+   clear: both;
+   display: table;
+}
+}
