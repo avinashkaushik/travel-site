@@ -32,7 +32,7 @@ module.exports = {
     rules:[                           //Configuring webpack for understanding and processing css files
       {
         test: /\.css$/i,              // rules for file ends(extension) with .css
-        use: ['style-loader','css-loader', {loader: "postcss-loader", options:{plugins: postCSSPlugins}}]           // Uses Css loader package for unserstanding on bundle .css file and style laoder apply or uses the style in browser
+        use: ["style-loader", "css-loader?url=false", { loader: "postcss-loader", options: { plugins: postCSSPlugins }  }]           // Uses Css loader package for unserstanding on bundle .css file and style laoder apply or uses the style in browser
       }                                                                                              //postcss is an empty canvas in which we can add postcss plugins
     ]
   }
